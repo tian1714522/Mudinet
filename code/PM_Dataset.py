@@ -31,9 +31,7 @@ def csi2pdp(csi_real, csi_imag, apply_fftshift=True):
 
 class PM_Dataset(Dataset):
     def __init__(self, root_path, fold5_path, train_test_list):
-        """
-        参数设置：传感器参数、滑窗参数、预处理参数、文件指针list
-        """
+
         # 路径设置
         self.train_or_test = train_test_list[:-5]
         self.path = root_path
@@ -110,3 +108,4 @@ class PM_Dataset(Dataset):
 
 
         return pdp, traj
+
